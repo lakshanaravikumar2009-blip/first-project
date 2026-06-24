@@ -1,0 +1,100 @@
+h1 {
+    color: #9600fa;
+    font-size: 50px;
+    margin-bottom: 5px;
+    padding: 80px;
+    gap:50px;
+   
+}
+
+
+/* Container Layout */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Individual Card */
+.service-card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Circular Images */
+.image-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes it a circle */
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: -50px; /* Optional: overlaps the card slightly */
+}
+
+/* Typography */
+h3 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #e74c3c;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+/* The "Read More" Button */
+.read-more {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #c0392b;
+}
+
+.services-container{
+display: grid;
+  /* Creates 2 equal rows and 4equal column; adjusts automatically on smaller screens */
+  grid-template-rows:repeat(2, 1fr); 
+  grid-template-columns:repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff; /* Light grey background like your image */
+}
+
+/* Individual service box */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  padding: 30px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}

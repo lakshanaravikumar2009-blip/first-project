@@ -1,0 +1,326 @@
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-image {
+    position: relative;
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 20px 20px 0px #3d70fd; /* Matching the green theme */
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #3d70fd;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.sub-title {
+    color: #4d4af7;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #333;
+}
+
+.about-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-features li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #a055e7;
+}
+
+.achievement-area {
+    /* 1. Insert your background image here */
+    background-image: url('images/light.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Optional: adds a nice parallax effect */
+    width: 100%;
+    position: relative;
+}
+
+.achievement-overlay {
+    /* This creates that dark transparent layer over the image */
+    background: rgba(108, 85, 241, 0.7); 
+    padding: 100px 0;
+}
+
+.achievement-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievement-item {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+    /* 3. The vertical white lines between items */
+    border-right: 1px solid rgba(109, 100, 100, 0.527);
+}
+
+.achievement-item:last-child {
+    border-right: none;
+}
+
+.achievement-item img {
+    width:55px;
+    margin-bottom: 20px;
+}
+
+.achievement-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns like your image */
+    gap: 25px;
+    padding: 70px;
+}
+
+.service-item {
+    background: #fcf9f9;
+
+    padding: 50px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-weight: bold;
+}
+
+.service-title{
+     background: #fcf9f9;
+     padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    font-weight: bold;
+}
+ 
+.service-title h2 {
+     padding: 40px 20px;
+    text-align: center;
+
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+
+}
+/* The container for the entire grid */
+.services-grid {
+  display: grid;
+  /* Creates 4 equal rows and 5 equal column; adjusts automatically on smaller screens */
+  grid-template-rows:repeat(4, 1fr); 
+  grid-template-columns:repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff; /* Light grey background like your image */
+}
+
+/* Individual service box */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  padding: 30px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect for better UX */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Icon styling */
+.service-card img {
+  width: 60px; /* Adjust based on your icon sizes */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Label styling (Matching the font style in your image) */
+.service-card p {
+  font-family: 'Comic Sans MS', 'cursive', sans-serif; /* Closest web-safe font to your image */
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.service-card.selected P{
+  font-family: 'Comic Sans MS', 'cursive', sans-serif; /* Closest web-safe font to your image */
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+/* THIS IS THE ONLY TIME IT CHANGES COLOR */
+.service-card.selected {
+  background-color: #898fd8 !important; /* Light green highlight */
+}
+
+/* For mobile phones: change from 5 columns to 2 */
+@media (max-width: 800px) {
+  .main-grid { grid-template-columns: repeat(2, 1fr); }
+
+}
+.video-container {
+    width: 100%;
+    max-width: 900px; /* Adjust to how big you want the laptop */
+    margin: 40px auto;
+    position: relative;
+}
+
+.laptop-frame {
+    background: #1a1a1a; /* Dark bezel color */
+    padding: 15px; /* Creates the border thickness */
+    border-radius: 20px 20px 0 0; /* Rounded top corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+#hero-video {
+    width: 100%;
+    display: block;
+    border-radius: 5px; /* Slightly round the video corners */
+    background: #000; /* Black background while loading */
+}
+
+.laptop-base {
+    height: 15px;
+    background: #333;
+    width: 110%; /* Makes the base wider than the screen */
+    margin-left: -5%;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Add this to your CSS */
+.laptop-frame::after {
+    content: "";
+    position: absolute;
+    top: 15px; left: 15px; right: 15px; bottom: 0;
+    background: linear-gradient(rgba(255,255,255,0.05), transparent);
+    pointer-events: none; /* Allows you to still click the video */
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #faf9f9;
+    color: #020202;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #9047f0;
+}
+
+
+.laptop-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+}
+
+/* The dark border around the video */
+.laptop-frame {
+    background: #460ead; 
+    padding: 15px; /* Adjust this to change the thickness of the bezel */
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(155, 38, 252, 0.959);
+}
+
+/* The actual "glass" area */
+.screen {
+    position: relative;
+    padding-bottom: 56.25%; /* Forces 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.screen iframe {
+    position: absolute;
+    controls:0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* This makes the video fill the screen area entirely */
+    object-fit: cover; 
+}
+
+/* The silver/gray base seen in your laptop images */
+.laptop-base {
+    height: 15px;
+    background: #e0e0e0;
+    border-radius: 0 0 10px 10px;
+    width: 106%;
+    margin-left: -3%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+.container { width: 90%; max-width: 1200px; margin: auto; }
+
+/* Top Bar */
+.top-bar { background:#5D09ED; color:white; padding: 8px 0; font-size: 13px; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+.social-links a { color: white; margin-right: 10px; background: rgba(212, 180, 180, 0.438); padding: 4px 8px; border-radius: 2px; }
+
+
+
+
+/* Navigation */
+header { background: #fff; border-bottom: 1px solid #eee; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; height: 130px; }
+nav ul { display: flex; list-style: none; }
+nav ul li a { padding: 30px 15px; text-decoration: none; color: #555555; font-size: 14px; }
+nav ul li.active { border-top: 3px solid #ffffff44; background: #f9f9f9; }
+
+.slideshow-container {
+    position: relative;
+    height: 500px; /* Adjust to your needs */
+    width: 100%;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* This is what makes the current image visible */
+.hero-bg.active {
+    opacity: 1;
+}
+
+/* Style for your dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots {
+    display: flex;          /* Enables Flexbox */
+    justify-content: center; /* Centers dots horizontally */
+    align-items: center;     /* Aligns dots vertically */
+    gap: 10px;               /* Adds space between the dots */
+    padding: 20px 0;         /* Adds some breathing room top/bottom */
+}
+
+.dot.active-dot {
+    background-color: #b51dd3;
+}
+
+/* Show the active image */
+.hero-bg.active {
+    opacity: 1;
+}
+
+/* Fade animation effect */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* Services Intro */
+.services-intro { text-align: center; padding: 40px 20px; }
+.services-intro h1 { font-size: 32px; margin-bottom: 10px; }
+.color-dots span { display: inline-block; width: 10px; height: 10px; margin: 0 3px; border-radius: 2px; }
+.color-dots span:nth-child(1) { background: #2ecc71; }
+.color-dots span:nth-child(2) { background: #3498db; }
+.color-dots span:nth-child(3) { background: #e91e63; }
+
+/* Icon Menu */
+.icon-menu .container { display: flex; justify-content: space-around; border-top: 1px solid #eee; padding: 20px 0; }
+.icon-item { text-align: center; color: #777; cursor: pointer; padding: 10px; border: 1px solid transparent; }
+.icon-item i { font-size: 30px; margin-bottom: 10px; display: block; }
+.active-item { border: 1px solid #ddd; border-bottom: none; color: #aaaaaa; border-radius: 5px 5px 0 0; }
+
+
+/* Footer */
+footer { background: #5908f0; color: #bbb; padding: 40px 0 0 0; font-size: 14px; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding-bottom: 40px; }
+.footer-col h3 { color: rgb(224, 37, 37); margin-bottom: 20px; position: relative; }
+.footer-col h3::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 30px; height: 2px; background: #e74c3c; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col i { color: #0954f5; margin-right: 8px; }
+.copyright { background: #9446ec; color: white; text-align: center; padding: 15px; font-size: 12px; }
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #faf9f9;
+    color: #020202;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #9047f0;
+}
+

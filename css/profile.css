@@ -1,0 +1,45 @@
+h1{
+    gap:30px;
+    padding: 50px;;
+    color: blue;
+}
+
+
+
+
+/* The Responsive Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 20px; /* Space between the images */
+    padding: 20px;
+}
+
+
+/* Image Container */
+.portfolio-item {
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.portfolio-item img {
+    width: 150%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* This prevents the image from stretching */
+    border-radius: 5px; /* Optional: matches the clean look of your UI */
+    display: block;
+    transition: transform 0.5s ease; /* Smooth zoom effect */
+}
+
+
+/* Interaction: Zoom in on hover */
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive: Switch to 1 column on small screens */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}

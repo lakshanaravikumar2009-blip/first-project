@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    background: #ebe6e600;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar Thumbnails */
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0 0 80px; /* Fixed width for thumbs */
+}
+
+.thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #ff0000; /* Red border from image */
+    cursor: pointer;
+}
+
+/* Main Image */
+.main-image {
+    flex: 1;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content Area */
+.content {
+    flex: 1.5;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #e74c3c; /* Reddish color for the sub-headline */
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.location-footer {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Responsive view for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .thumbnails {
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}
